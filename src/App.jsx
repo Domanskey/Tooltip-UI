@@ -45,6 +45,7 @@ function Item({ isBefore, text, toolTipInfo }) {
             after:border-l-12 after:border-l-transparent 
             after:border-r-12 after:border-r-transparent 
             after:border-t-10 after:border-neutral-950
+            after:content-['']
 
             animate-scale
             "
