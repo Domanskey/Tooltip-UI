@@ -29,18 +29,28 @@ function Item({ isBefore, text, toolTipInfo }) {
     >
       <button className="group cursor-pointer relative">
         {text}
-        <div className="hidden group-hover:block animate-scale">
-          <p
-            className="bg-neutral-950 text-stone-50 cursor-default p-2.5 whitespace-nowrap text-sm text-left rounded-lg 
-            absolute left-1/2 bottom-9 -translate-x-1/2"
-          >
-            {toolTipInfo}
-          </p>
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 bottom-9 -translate-x-1/2 translate-y-full w-0 h-0 border-l-10 border-l-transparent border-r-10 border-r-transparent border-t-8 border-t-neutral-950"
-          ></div>
-        </div>
+        <p
+          className="
+            hidden group-hover:block
+            bg-neutral-950 text-stone-50 
+            cursor-default 
+            whitespace-nowrap text-sm text-left 
+            p-2.5 rounded-lg 
+            absolute left-1/2 bottom-9 -translate-x-1/2
+            
+            after:absolute 
+            after:bottom-0.5 after:translate-y-full
+            after:left-1/2 after:-translate-x-1/2 
+            after:w-0 after:h-0 
+            after:border-l-12 after:border-l-transparent 
+            after:border-r-12 after:border-r-transparent 
+            after:border-t-10 after:border-neutral-950
+
+            animate-scale
+            "
+        >
+          {toolTipInfo}
+        </p>
       </button>
     </li>
   );
